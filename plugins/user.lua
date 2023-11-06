@@ -9,4 +9,12 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+{ 
+    "lukas-reineke/indent-blankline.nvim", 
+    main = "ibl", 
+    opts = {},
+    config = function()
+      require("ibl").setup()
+    end,
+}, 
 }
