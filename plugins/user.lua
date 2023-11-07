@@ -35,7 +35,14 @@ return {
             css = true,
             css_fn = true,
             mode = 'background',
-            },)
+            })
     end,
   },
+  -- {
+  --   "RRethy/vim-illuminate",
+  --   lazy = true,
+  --   config = function()
+  --     require("illuminate").configure()
+  --   end,
+  -- },
 }
