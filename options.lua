@@ -17,6 +17,23 @@ return {
     icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     resession_enabled = false, -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
+
+      -- change the highlight style
+    vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" }),
+    vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" }),
+    vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" }),
+
+    --- auto update the highlight style on colorscheme change
+    vim.api.nvim_create_autocmd({ "ColorScheme" }, {
+      pattern = { "*" },
+      callback = function(ev)
+        vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
+        vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
+        vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
+      end
+    })  
+  
+  
   },
 }
 -- If you need more control, you can use the function()...end notation
