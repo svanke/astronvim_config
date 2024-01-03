@@ -9,27 +9,27 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  {
-    "norcalli/nvim-colorizer.lua",
-    config = function()
-        require("colorizer").setup({
-                "css"; 
-                "scss"; 
-                "html"; 
-                "javascript";
-            }, 
-            {
-            RGB = true,
-            RRGGBB = true,
-            RRGGBBAA = true,
-            rgb_fn = true,
-            hsl_fn = true,
-            css = true,
-            css_fn = true,
-            mode = 'background',
-            })
-    end,
-  },
+  -- {
+  --   "norcalli/nvim-colorizer.lua",
+  --   config = function()
+  --       require("colorizer").setup({
+  --               "css"; 
+  --               "scss"; 
+  --               "html"; 
+  --               "javascript";
+  --           }, 
+  --           {
+  --           RGB = true,
+  --           RRGGBB = true,
+  --           RRGGBBAA = true,
+  --           rgb_fn = true,
+  --           hsl_fn = true,
+  --           css = true,
+  --           css_fn = true,
+  --           mode = 'background',
+  --           })
+  --   end,
+  -- },
         {
             "L3MON4D3/LuaSnip",
             config = function(plugin, opts)
