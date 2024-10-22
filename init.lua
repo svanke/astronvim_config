@@ -15,5 +15,15 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+
+
+-- Force change filetype from "htmldjango" to "djangohtml"
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "htmldjango",
+  callback = function()
+    vim.bo.filetype = "djangohtml"
+  end,
+})
+
 require "lazy_setup"
 require "polish"
